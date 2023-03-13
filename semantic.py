@@ -32,16 +32,6 @@ for token1 in tokens:
 # apple and apple have highest similarity (1) - because they are the same thing
 # banana monkey has higher similarity than banana cat showing that spacy knows that monkeys eat bananas
 
-
-# here is my own example:
-my_tokens = nlp('computers woman science man engineer art design')
-
-for token1 in my_tokens:
-    for token2 in my_tokens:
-        print(token1.text, token2.text, token1.similarity(token2))
-
-# interestingly man-engineer and man-computers combinations have a higher similarity rate compared to woman-computers and woman-engineer, according to spaCy
-
 # run en_core_web_sm
 
 nlp = spacy.load('en_core_web_sm')
